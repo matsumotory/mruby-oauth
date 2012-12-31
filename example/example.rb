@@ -10,8 +10,8 @@ twitter     = OAuth.new(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKE
 response    = twitter.post(API_URL, {:status => tweet}, ex_headers)
 
 if response.code.to_i == 200
-  puts "tweet success: #{msg}"
+  puts "tweet success: #{tweet}"
 else
-  puts "tweet failed: #{msg}: bellow response"
+  puts "tweet failed: #{tweet}: bellow response"
   p response
 end
