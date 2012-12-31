@@ -1,6 +1,5 @@
-# oauth Class for mruby
+# mruby-oauth: oauth Class for mruby
 refactored oauth of iij/mruby using mruby-uv and mruby-http.
-
 depend on mruby-uv, mruby-http, mruby-simplehttp, mruby-httprequest, mruby-digest, mruby-pack
 
 ## install by mrbgems
