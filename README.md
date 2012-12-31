@@ -35,8 +35,6 @@ else
 end
 ```
 
-# License
-under the MIT License:
-
-* http://www.opensource.org/licenses/mit-license.php
+## License
+This software is licensed under the same license terms of the original mruby.
 
