@@ -22,7 +22,7 @@ class OAuth < HttpRequest
     request['Authorization'] = auth_header(method, url, request["body"])
     request['User-Agent']    = USER_AGENT
     host = url.host.to_sym.to_s
-    p request_uri, request
+    p method, request_uri, request
     SimpleHttp.new(host, url.port).request(method, request_uri, request)
   end 
   def auth_header(method, url, body)
@@ -79,8 +79,9 @@ class OAuth < HttpRequest
     str += url.host
     str += ":" + url.port  if url.port
     str += url.path if url.path
-    str += "?" + url.query  if url.query
-    p str
+    #str += "?" + url.query  if url.query
+    p ["sigbature_base_url", str]
+    str
   end
   def normalize_parameters(parameters, body, query)
     parameters = encode_parameters(parameters, nil)
