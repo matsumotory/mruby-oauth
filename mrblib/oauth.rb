@@ -28,6 +28,7 @@ class OAuth < HttpRequest
   def auth_header(method, url, body)
     parameters = oauth_parameters
     parameters["oauth_signature"] = signature(method, url, body, parameters)
+    'OAuth ' + encode_parameters(parameters, ', ', '"')
   end
   def oauth_parameters
     {
@@ -62,6 +63,7 @@ class OAuth < HttpRequest
     method = method.upcase
     base_url = signature_base_url(url)
     parameters = normalize_parameters(parameters, body, url.query)
+    encode_parameters([ method, base_url, parameters ])
   end
   def signature_base_url(url)
     str = url.schema + "://"
