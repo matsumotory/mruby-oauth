@@ -2,7 +2,7 @@ CONSUMER_KEY        = ''
 CONSUMER_SECRET     = ''
 ACCESS_TOKEN        = ''
 ACCESS_TOKEN_SECRET = ''
-GET_API_URL         = 'http://api.twitter.com/1/statuses/home_timeline.json?count='
+GET_API_URL         = 'http://api.twitter.com/1.1/statuses/home_timeline.json?count='
 
 tweet_num = 10
 interval = 60
