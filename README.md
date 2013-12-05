@@ -3,16 +3,17 @@ oauth Class for mruby
 
 refactored oauth of iij/mruby using mruby-uv and mruby-http.
 
-depend on mruby-uv, mruby-http, mruby-simplehttp, mruby-httprequest, mruby-digest, mruby-pack
+depend on mruby-http, mruby-httprequest, mruby-digest, mruby-pack
 
 ## install by mrbgems
-```bash
-git clone git://github.com/matsumoto-r/mruby-oauth.git
-cp -pr mruby-oauth ${MRUBY_ROOT}/mrbgems/g/.
-echo mruby-oauth >> ${MRUBY_ROOT}/mrbgems/GEMS.active
-cd ${MRUBY_ROOT}
-make
-./bin/mruby ${MRUBY_ROOT}/mrbgems/g/mruby-oauth/example/example.rb
+ - add conf.gem line to `build_config.rb`
+```ruby
+MRuby::Build.new do |conf|
+
+    # ... (snip) ...
+
+    conf.gem :git => 'https://github.com/matsumoto-r/mruby-oauth.git'
+end
 ```
 
 ## example
