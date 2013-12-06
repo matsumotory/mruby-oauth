@@ -1,9 +1,9 @@
 # mruby-oauth 
 oauth Class for mruby
 
-refactored oauth of iij/mruby using mruby-uv and mruby-http.
+refactored oauth of iij/mruby.
 
-depend on mruby-http, mruby-httprequest, mruby-digest, mruby-pack
+depend on mruby-http, mruby-httprequest, mruby-digest, mruby-pack, mruby-sleep, mruby-json
 
 ## install by mrbgems
  - add conf.gem line to `build_config.rb`
