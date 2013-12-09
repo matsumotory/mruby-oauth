@@ -2,9 +2,9 @@ CONSUMER_KEY        = ''
 CONSUMER_SECRET     = ''
 ACCESS_TOKEN        = ''
 ACCESS_TOKEN_SECRET = ''
-API_URL             = 'http://api.twitter.com/1.1/statuses/update.json'
+API_URL             = 'https://api.twitter.com/1.1/statuses/update.json'
 
-tweet       = "happy new year from mruby-oauth"
+tweet       = "test tweet"
 ex_headers  = {'Content-Type' => 'application/x-www-form-urlencoded'}
 twitter     = OAuth.new(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 response    = twitter.post(API_URL, {:status => tweet}, ex_headers)
