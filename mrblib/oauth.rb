@@ -23,7 +23,7 @@ class OAuth < HttpRequest
     request['Authorization'] = auth_header(method, url, request["body"])
     request['User-Agent']    = USER_AGENT
     host = url.host.to_sym.to_s
-    SimpleHttp.new(host, url.port).request(method, request_uri, request)
+    SimpleHttp.new(url.schema, host, url.port).request(method, request_uri, request)
   end 
   def auth_header(method, url, body)
     parameters = oauth_parameters
