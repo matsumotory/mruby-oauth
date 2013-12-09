@@ -68,7 +68,7 @@ class OAuth < HttpRequest
   def signature_base_url(url)
     str = url.schema + "://"
     str += url.host
-    str += ":" + url.port  if url.port
+    str += ":" + url.port.to_s  if url.port
     str += url.path if url.path
     str
   end
